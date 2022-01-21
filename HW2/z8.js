@@ -15,7 +15,7 @@
 // f([]) // Error: parameter can't be an empty
 // ```
 
-//var arr = new Array;
+var arr = new Array;
 var i = 0;
 
 function f(arr){   
@@ -25,13 +25,13 @@ function f(arr){
     if (arr.length == 0){
         throw new Error  ('Error: parameter can\'t be an empty');
     }
-    else { 
-        (i <= arr.length - 1) 
-        console.log(arr[i]);      
-        i++;      
-        f(arr);        
+    else if(i <= arr.length-1)  { 
+        (i <= arr.length-1) 
+        console.log(arr[i]);               
+        i++;           
+        f(arr);                   
         } 
-};
+}
 
 f([1,2,3]);
 //f(1,2,3) 
