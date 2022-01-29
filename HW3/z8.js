@@ -22,3 +22,36 @@
 // f(arr5); // 3
 // ```
 
+
+const arr = [[[1, 2], [1, 2]], [[2, 1], [1, 2]]]
+
+function rez(massiv){
+
+  if (!Array.isArray(massiv)){
+    throw new Error ('Параметр обязателен и может принимать только массив')
+  }
+
+  else {  
+         let sum = 0
+         let arry = new Array()
+
+         arr.toString().split(',').map((element)=> {        
+         let num = Number(element)  
+         arry.push(num)          
+         }) 
+
+         for (i in arry) {	
+         sum += arry[i]        
+         }	
+
+         if (isNaN(sum) ){
+         throw new Error ('На каком то уровне было найдено не число и не массив')
+         } 
+
+     console.log(sum)        
+  }
+}
+
+
+rez(arr)
+
