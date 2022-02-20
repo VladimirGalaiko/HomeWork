@@ -7,11 +7,10 @@
 
 function compose(...argsFun) {
   return function (param) {
-    let acc = param
     for (let i = argsFun.length - 1; i >= 0; i--) {
-      acc += argsFun[i]('')
+      param += argsFun[i]('')
     }
-    return acc
+    return param
   }
 }
 
